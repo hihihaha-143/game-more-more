@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin media-sm {
+  @media (min-width: 640px) { @content; }
+}
+
+@mixin media-md {
+  @media (min-width: 768px) { @content; }
+}
+
+@mixin media-lg {
+  @media (min-width: 1024px) { @content; }
+}
+
+@mixin media-xl {
+  @media (min-width: 1280px) { @content; }
+}

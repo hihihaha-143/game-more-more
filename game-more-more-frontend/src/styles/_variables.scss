@@ -1,0 +1,32 @@
+// === Палитра (основная) ===
+$color-lemon-zest:   #fded0d;
+$color-mango-tango:  #f6873d;
+$color-peony-pink:   #ffaaae;
+$color-mandarin-red: #f75d31;
+
+// === Базовые цвета ===
+$color-white: #ffffff;
+$color-black: #000000;
+
+// === Шрифты ===
+$font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+$font-family-display: 'Bungee', 'Inter', system-ui, sans-serif; // для заголовков/логотипа
+
+// === Отступы (шкала) ===
+$space-xs: 4px;
+$space-sm: 8px;
+$space-md: 16px;
+$space-lg: 24px;
+$space-xl: 32px;
+$space-2xl: 48px;
+
+// === Радиусы ===
+$radius-sm: 4px;
+$radius-md: 8px;
+$radius-lg: 16px;
+$radius-xl: 24px;
+
+// === Тени ===
+$shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.16);

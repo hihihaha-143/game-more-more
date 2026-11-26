@@ -1,0 +1,27 @@
+# === Общее ===
+.DS_Store
+Thumbs.db
+*.log
+
+# === Laravel (backend) ===
+/game-more-more-backend/vendor/
+/game-more-more-backend/node_modules/
+/game-more-more-backend/public/build/
+/game-more-more-backend/public/hot/
+/game-more-more-backend/storage/*.key
+/game-more-more-backend/storage/framework/cache/data/*
+/game-more-more-backend/storage/framework/sessions/*
+/game-more-more-backend/storage/framework/views/*
+/game-more-more-backend/storage/logs/*
+/game-more-more-backend/.env
+/game-more-more-backend/.env.backup
+/game-more-more-backend/.phpunit.result.cache
+/game-more-more-backend/.idea
+/game-more-more-backend/.vscode
+
+# === React/Vite (frontend) ===
+/game-more-more-frontend/node_modules/
+/game-more-more-frontend/dist/
+/game-more-more-frontend/.vite/
+/game-more-more-frontend/.env
+/game-more-more-frontend/.env.local
