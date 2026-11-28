@@ -5,21 +5,14 @@ import { saveProgress, unlockAchievement } from '../../lib/dbHelpers.js'
 import styles from './MemoryGame.module.scss'
 
 export default function MemoryGame() {
-  const [cards, setCards] = useState([])
+  const [cards] = useState(() => {
+    const level = levels[0]
+    return [...level.cards].sort(() => Math.random() - 0.5)
+  })
   const [flipped, setFlipped] = useState([])
   const [matched, setMatched] = useState([])
   const [moves, setMoves] = useState(0)
   const [newAchievement, setNewAchievement] = useState(null)
-
-  useEffect(() => {
-    const level = levels[0]
-    const shuffled = [...level.cards].sort(() => Math.random() - 0.5)
-    setCards(shuffled)
-    setFlipped([])
-    setMatched([])
-    setMoves(0)
-    setNewAchievement(null)
-  }, [])
 
   const handleCardClick = (index) => {
     if (flipped.includes(index) || matched.includes(cards[index].id) || flipped.length === 2) {
@@ -62,7 +55,7 @@ export default function MemoryGame() {
     }
 
     saveResult()
-  }, [isGameWon])
+  }, [isGameWon, moves])
 
   return (
     <div className={styles.gameContainer}>
