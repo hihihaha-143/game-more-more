@@ -1,0 +1,65 @@
+@use '../styles/variables' as *;
+
+.page {
+  /* Убираем flex-центрирование, просто задаем максимальную ширину для аккуратной витрины */
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: $space-lg 0;
+}
+
+.title {
+  font-family: $font-family-display;
+  font-size: 32px;
+  color: $color-black;
+  margin-bottom: $space-lg;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: $space-lg;
+}
+
+.card {
+  background: $color-white;
+  border-radius: $radius-lg;
+  padding: $space-lg;
+  text-align: center;
+  box-shadow: $shadow-sm;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border: 1px solid #eaeaea;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  margin-bottom: $space-md;
+  
+  img {
+    max-height: 100%;
+  }
+}
+
+.cardTitle {
+  font-size: 20px;
+  font-weight: 600;
+  color: $color-mandarin-red;
+  margin-bottom: $space-xs;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}

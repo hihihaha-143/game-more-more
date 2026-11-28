@@ -1,0 +1,94 @@
+@use '../../styles/variables' as *;
+
+.appWrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff9e6 0%, #ffebd6 100%);
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 $space-md;
+}
+
+.header {
+  background-color: $color-lemon-zest;
+  padding: $space-md 0;
+  box-shadow: $shadow-sm;
+  
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Разводим левую и правую часть по краям */
+  }
+}
+
+.leftNav {
+  display: flex;
+  align-items: center;
+  gap: $space-md;
+}
+
+.rightNav {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  text-decoration: none;
+  
+  h1 {
+    color: $color-mandarin-red;
+    font-family: $font-family-display;
+    font-size: 24px;
+    margin: 0;
+  }
+}
+
+.backLink {
+  display: flex;
+  align-items: center;
+  gap: $space-xs;
+  color: $color-mandarin-red;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.4);
+  padding: $space-xs $space-sm;
+  border-radius: $radius-md;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.iconLink {
+  color: $color-mandarin-red;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: $space-xs;
+  border-radius: 50%;
+  transition: background 0.2s;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.5);
+  }
+}
+
+.main {
+  flex: 1;
+  padding: $space-2xl 0; 
+}
+
+.footer {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: $space-md 0;
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+  border-top: 1px solid #eaeaea;
+}

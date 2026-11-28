@@ -1,0 +1,80 @@
+@use '../styles/variables' as *;
+
+.page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: $space-lg 0;
+}
+
+.title {
+  font-family: $font-family-display;
+  font-size: 32px;
+  color: $color-black;
+  margin-bottom: $space-lg;
+  text-align: center;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: $space-md;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: $space-lg;
+  background: $color-white;
+  padding: $space-lg;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-sm;
+  border: 1px solid #eaeaea;
+  transition: all 0.2s ease;
+}
+
+/* Стили для разблокированных */
+.unlocked {
+  border-color: rgba($color-mango-tango, 0.3);
+  box-shadow: $shadow-md;
+}
+
+/* Стили для заблокированных (приглушенные) */
+.locked {
+  opacity: 0.7;
+  background: #fdfdfd;
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.unlocked .iconWrapper {
+  background: rgba($color-lemon-zest, 0.2); /* Легкий желтый фон для полученных */
+}
+
+.content {
+  flex: 1;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: $color-black;
+  margin-bottom: 4px;
+}
+
+.cardDesc {
+  font-size: 14px;
+  color: #666;
+}
+
+.status {
+  flex-shrink: 0;
+}

@@ -1,0 +1,94 @@
+@use '../../styles/variables' as *;
+
+.gameContainer {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  background: $color-white;
+  padding: $space-xl;
+  border-radius: $radius-xl;
+  box-shadow: $shadow-lg;
+  /* Явно задаем ширину, чтобы внутренний грид знал, от чего считать 1fr */
+  width: 100%; 
+}
+
+.header {
+  margin-bottom: $space-lg;
+  
+  h2 {
+    font-family: $font-family-display;
+    color: $color-mandarin-red;
+    font-size: 28px;
+    margin-bottom: $space-xs;
+  }
+
+  p {
+    color: #666;
+    font-size: 16px;
+  }
+}
+
+.board {
+  display: grid;
+  /* Жестко задаем ширину колонок, чтобы карточки не сжимались */
+  grid-template-columns: repeat(3, 120px);
+  gap: $space-md;
+  justify-content: center; /* Центрируем сетку внутри контейнера */
+}
+
+.card {
+  width: 120px;  /* Фиксированная ширина */
+  height: 120px; /* Фиксированная высота */
+  cursor: pointer;
+  perspective: 1000px;
+}
+
+.cardInner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+.cardFront,
+.cardBack {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: $radius-lg;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: $shadow-sm;
+  /* Убираем огромный шрифт, чтобы символы влезали в 120px */
+  font-size: 2.5rem; 
+}
+
+.cardFront {
+  background-color: $color-lemon-zest;
+  color: $color-mandarin-red;
+  font-weight: bold;
+}
+
+.cardBack {
+  background-color: $color-peony-pink;
+  transform: rotateY(180deg);
+}
+
+.card.matched .cardBack {
+  background-color: #d4edda;
+  border: 2px solid #28a745;
+}
+
+.achievementToast {
+  background-color: $color-mango-tango;
+  color: $color-white;
+  padding: $space-sm $space-md;
+  border-radius: $radius-md;
+  display: inline-block;
+  margin-top: $space-md;
+  font-weight: bold;
+  box-shadow: $shadow-md;
+}
